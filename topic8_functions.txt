@@ -1,0 +1,249 @@
+//1.Write a Dart function to find the maximum of three numbers.
+// int findMax(int num1, int num2, int num3) {
+//   int max = num1;
+
+//   if (num2 > max) {
+//     max = num2;
+//   }
+
+//   if (num3 > max) {
+//     max = num3;
+//   }
+
+//   return max;
+// }
+// void main() {
+//   int first = 20;
+//   int second = 30;
+//   int third = 25;
+
+//   int maxNumber = findMax(first, second, third);
+
+//   print("$first, $second, and $third is $maxNumber");
+// }
+
+//2.Write a Dart function to sum all the numbers in a list.
+//Sample List : (8, 2, 3, 0, 7)
+//Expected Output : 20
+// int sumList(List<int> numbers) {
+//   int sumall = 0;
+//   for (int number in numbers) {
+//     sumall += number;
+//   }
+//   return sumall;
+// }
+
+// void main() {
+//   List<int> sampleList = [8, 2, 3, 0, 7];
+//   int result = sumList(sampleList);
+//   print(result);
+// }
+
+//3.Write a Dart function to multiply all the numbers in a list.
+// Sample List : (8, 2, 3, -1, 7)
+// Expected Output : -336
+// int multiplyall(List<int> numbers) {
+//   int product = 1; 
+//   for (int number in numbers) {
+//     product *= number; 
+//   }
+//   return product;
+// }
+
+// void main() {
+//   List<int> sampleList = [8, 2, 3, -1, 7];
+//   int result = multiplyall(sampleList);
+//   print(result);
+// }
+
+
+//4.Write a Dart program to reverse a string.
+// Sample String : "1234abcd"
+// Expected Output : "dcba4321"
+// String reverse(String input) {
+//   List<String> chars = input.split('');
+//   chars = chars.reversed.toList();
+//   return chars.join();
+// }
+
+// void main() {
+//   String inputString = "1234abcd";
+//   String reversedString = reverse(inputString);
+
+//   print("$inputString");
+//   print("$reversedString");
+// }
+
+
+
+
+
+//5.Write a Dart function to calculate the factorial of a number (a non-negative integer). The function accepts the number as an argument.
+// int factorial(int n) {
+//   if (n == 0) {
+//     return 1; 
+//   } else {
+//     return n * factorial(n - 1); 
+//   }
+// }
+
+// void main() {
+//   int number = 5; 
+//   int result = factorial(number);
+
+//   print("Factorial of $number is $result");
+// }
+
+
+//7. Write a Dart function that accepts a string and counts the number of upper and lower case letters.
+// Sample String : 'The quick Brow Fox'
+// Expected Output :
+// No. of Upper case characters : 3
+// No. of Lower case Characters : 12
+// void count(String input) {
+//   int upperCase = 0;
+//   int lowerCase = 0;
+
+//   for (int i = 0; i < input.length; i++) {
+//     if (input[i].toUpperCase() == input[i]) {
+//       upperCase++;
+//     } else if (input[i].toLowerCase() == input[i]) {
+//       lowerCase++;
+//     }
+//   }
+
+//   print(upperCase);
+//   print(lowerCase);
+// }
+
+// void main() {
+//   String sampleString = 'The quick Brow Fox';
+//   count(sampleString);
+// }
+
+
+
+
+// 8.Write a Dart function that takes a list and returns a new list with distinct elements from the first list.
+// Sample List : [1,2,3,3,3,3,4,5]
+// Unique List : [1, 2, 3, 4, 5]
+// List<lisst> remove<lisst>(List<lisst> list) {
+//   List<lisst> distinct = [];
+
+//   for (lisst element in list) {
+//     if (!distinct.contains(element)) {
+//       distinct.add(element);
+//     }
+//   }
+
+//   return distinct;
+// }
+
+// void main() {
+//   List<int> sampleList = [1, 2, 3, 3, 3, 3, 4, 5];
+//   List<int> uniqueList = remove(sampleList);
+
+//   print("$sampleList");
+//   print("$uniqueList");
+// }
+
+
+
+
+//9.Write a Dart function that takes a number as a parameter and checks whether the number is prime or not.
+//Note : A prime number (or a prime) is a natural number greater than 1 and that has no positive divisors other than 1 and itself.
+// bool isPrime(int number) {
+//   if (number <= 1) {
+//     return false; 
+//   }
+
+//   if (number == 2) {
+//     return true; 
+//   }
+
+//   if (number % 2 == 0) {
+//     return false;
+//   }
+
+//   for (int i = 3; i * i <= number; i += 2) {
+//     if (number % i == 0) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// }
+
+// void main() {
+//   int numberToCheck = 16; 
+//   bool isNumberPrime = isPrime(numberToCheck);
+
+//   if (isNumberPrime) {
+//     print("prime number.");
+//   } else {
+//     print("not prime number.");
+//   }
+// }
+
+//10.Write a Dart program to print the even numbers from a given list.
+// Sample List : [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// Expected Result : [2, 4, 6, 8]
+// void evennumber(List<int> numbers) {
+//   List<int> evenNumbers = [];
+
+//   for (int number in numbers) {
+//     if (number % 2 == 0) {
+//       evenNumbers.add(number);
+//     }
+//   }
+
+//   print(evenNumbers);
+// }
+
+// void main() {
+//   List<int> sampleList = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+//   evennumber(sampleList);
+// }
+
+//12.Write a Dart function that checks whether a passed string is a palindrome or not.
+// bool palindrom(String str) {
+//   int left = 0;
+//   int right = str.length - 1;
+
+//   while (left < right) {
+//     if (str[left] != str[right]) {
+//       return false;
+//     }
+//     left++;
+//     right--;
+//   }
+//   return true;
+// }
+
+// void main() {
+//   String inputString = "racecar"; 
+//   if (palindrom(inputString)) {
+//     print("$inputString palindrome.");
+//   } else {
+//     print("$inputString not palindrome.");
+//   }
+// }
+
+
+//14. Write a Dart program to access a function inside a function.
+// void outerFunction() {
+//   print("outer function");
+
+//   void innerFunction() {
+//     print("inner function");
+//   }
+//   innerFunction();
+// }
+
+// void main() {
+//   print("Start");
+  
+//   outerFunction();
+
+//   print("finish");
+// }
